@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import NotFound from "../Pages/Shared/NotFound/NotFound";
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
                 element:<Contact></Contact>,
             },
         ]
+    },
+    {
+        path: '*',
+        element:<NotFound></NotFound>,
     }
-])
+]);
 export default router;
