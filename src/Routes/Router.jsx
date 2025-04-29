@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import NotFound from "../Pages/Shared/NotFound/NotFound";
+import Visa from "../Pages/Visa/Visa";
 
 
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
+            },
+            {
+                path: "/visa",
+                element: <Visa />,
             },
             {
                 path:'/about',
