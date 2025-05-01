@@ -7,7 +7,7 @@ const VisaAppointments = ({ selectedDate }) => {
   const [appointments, setAppointments] = useState([]);
   const [time, setTime] = useState({});
   useEffect(() => {
-    fetch("visaAppointmentOptions.json")
+    fetch("http://localhost:7000/appointment")
       .then((res) => res.json())
       .then((data) => setAppointments(data));
   }, []);

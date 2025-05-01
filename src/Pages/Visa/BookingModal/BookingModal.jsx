@@ -3,6 +3,7 @@ import React from "react";
 
 const BookingModal = ({ time, selectedDate }) => {
   const date = format(selectedDate, "PP");
+  const {name, slots} = time;
 
   return (
     <div>
@@ -10,7 +11,7 @@ const BookingModal = ({ time, selectedDate }) => {
       <div className="modal" role="dialog">
         <div className="modal-box text-black">
           <div className="flex justify-between items-start">
-            <h3 className="text-lg font-bold">{time.name}</h3>
+            <h3 className="text-lg font-bold">{name}</h3>
             <label
               htmlFor="book_modal"
               className="btn rounded-full bg-primary text-white font-semibold"
@@ -39,9 +40,9 @@ const BookingModal = ({ time, selectedDate }) => {
               className="select input w-full"
             >
               <option disabled={true}>Pick a browser</option>
-              <option>Chrome</option>
-              <option>FireFox</option>
-              <option>Safari</option>
+              {slots?.map((slot, i)=>(
+                  <option key={i}>{slot}</option>
+                ))}
             </select>
 
             <label className="label">Email</label>

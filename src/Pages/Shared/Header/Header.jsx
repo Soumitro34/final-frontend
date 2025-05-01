@@ -17,6 +17,9 @@ const Header = () => {
       <li>
         <Link to='/contact'>Contact</Link>
       </li>
+      <li>
+        <Link to='/login'>Log In</Link>
+      </li>
     </React.Fragment>
   );
 
